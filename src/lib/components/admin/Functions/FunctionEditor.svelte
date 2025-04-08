@@ -332,7 +332,7 @@ class Pipe:
 						</div>
 					</div>
 
-					<div class=" flex gap-2 px-1 items-center">
+					<div class=" flex gap-2 items-center">
 						{#if edit}
 							<div class="text-sm text-gray-500 shrink-0">
 								{id}
@@ -340,7 +340,7 @@ class Pipe:
 						{:else}
 							<Tooltip className="w-full" content={$i18n.t('e.g. my_filter')} placement="top-start">
 								<input
-									class="w-full text-sm disabled:text-gray-500 bg-transparent outline-hidden"
+									class="input-setting"
 									type="text"
 									placeholder={$i18n.t('Function ID')}
 									bind:value={id}
@@ -356,7 +356,7 @@ class Pipe:
 							placement="top-start"
 						>
 							<input
-								class="w-full text-sm bg-transparent outline-hidden"
+								class="input-setting"
 								type="text"
 								placeholder={$i18n.t('Function Description')}
 								bind:value={meta.description}

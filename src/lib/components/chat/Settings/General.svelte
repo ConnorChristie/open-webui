@@ -315,7 +315,7 @@
 				<div class=" my-2.5 text-sm font-medium">{$i18n.t('System Prompt')}</div>
 				<Textarea
 					bind:value={system}
-					className="w-full text-sm bg-white dark:text-gray-300 dark:bg-gray-900 outline-hidden resize-none"
+					className="input-setting resize-none"
 					rows="4"
 					placeholder={$i18n.t('Enter system prompt here')}
 				/>
@@ -359,7 +359,7 @@
 						{#if keepAlive !== null}
 							<div class="flex mt-1 space-x-2">
 								<input
-									class="w-full text-sm dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+									class="input-setting"
 									type="text"
 									placeholder={$i18n.t("e.g. '30s','10m'. Valid time units are 's', 'm', 'h'.")}
 									bind:value={keepAlive}

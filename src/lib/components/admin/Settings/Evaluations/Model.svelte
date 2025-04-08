@@ -3,8 +3,9 @@
 	const dispatch = createEventDispatcher();
 	const i18n = getContext('i18n');
 
-	import Cog6 from '$lib/components/icons/Cog6.svelte';
+	import Tooltip from '$lib/components/common/Tooltip.svelte';
 	import ArenaModelModal from './ArenaModelModal.svelte';
+	import Pencil from '$lib/components/icons/Pencil.svelte';
 	export let model;
 
 	let showModel = false;
@@ -49,15 +50,17 @@
 		</div>
 
 		<div class="flex items-center">
-			<button
-				class="self-center w-fit text-sm p-1.5 dark:text-gray-300 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
-				type="button"
-				on:click={() => {
-					showModel = true;
-				}}
-			>
-				<Cog6 />
-			</button>
+			<Tooltip content={$i18n.t('Edit Arena Model')}>
+				<button
+					class="self-center w-fit text-sm p-1.5 dark:text-gray-300 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+					type="button"
+					on:click={() => {
+						showModel = true;
+					}}
+				>
+					<Pencil />
+				</button>
+			</Tooltip>
 		</div>
 	</div>
 </div>

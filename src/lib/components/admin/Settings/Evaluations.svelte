@@ -103,10 +103,10 @@
 	<div class="overflow-y-scroll scrollbar-hidden h-full">
 		{#if evaluationConfig !== null}
 			<div class="">
-				<div class="mb-3">
-					<div class=" mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+				<div class="my-2">
+					<div class="text-base font-medium">{$i18n.t('General')}</div>
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-2" />
+					<hr class="border-gray-100 dark:border-gray-850 my-2" />
 
 					<div class="mb-2.5 flex w-full justify-between">
 						<div class=" text-xs font-medium">{$i18n.t('Arena Models')}</div>
@@ -118,8 +118,8 @@
 				</div>
 
 				{#if evaluationConfig.ENABLE_EVALUATION_ARENA_MODELS}
-					<div class="mb-3">
-						<div class=" mb-2.5 text-base font-medium flex justify-between items-center">
+					<div class="my-2">
+						<div class="text-base font-medium flex justify-between items-center">
 							<div>
 								{$i18n.t('Manage')}
 							</div>

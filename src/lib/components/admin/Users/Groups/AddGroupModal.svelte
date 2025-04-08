@@ -5,6 +5,7 @@
 
 	import Modal from '$lib/components/common/Modal.svelte';
 	import Textarea from '$lib/components/common/Textarea.svelte';
+	import XMark from '$lib/components/icons/XMark.svelte';
 	export let onSubmit: Function = () => {};
 	export let show = false;
 
@@ -49,16 +50,7 @@
 					show = false;
 				}}
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					class="w-5 h-5"
-				>
-					<path
-						d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-					/>
-				</svg>
+				<XMark className="w-5 h-5" />
 			</button>
 		</div>
 
@@ -78,7 +70,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full text-sm bg-transparent placeholder:text-gray-300 dark:placeholder:text-gray-700 outline-hidden"
+										class="input-setting"
 										type="text"
 										bind:value={name}
 										placeholder={$i18n.t('Group Name')}
@@ -94,7 +86,7 @@
 
 							<div class="flex-1">
 								<Textarea
-									className="w-full text-sm bg-transparent placeholder:text-gray-300 dark:placeholder:text-gray-700 outline-hidden resize-none"
+									className="input-setting resize-none"
 									rows={2}
 									bind:value={description}
 									placeholder={$i18n.t('Group Description')}

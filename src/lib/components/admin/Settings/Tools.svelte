@@ -58,10 +58,10 @@
 	<div class=" overflow-y-scroll scrollbar-hidden h-full">
 		{#if servers !== null}
 			<div class="">
-				<div class="mb-3">
-					<div class=" mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+				<div class="my-2">
+					<div class="text-base font-medium">{$i18n.t('General')}</div>
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-2" />
+					<hr class="border-gray-100 dark:border-gray-850 my-2" />
 
 					<div class="mb-2.5 flex flex-col w-full justify-between">
 						<!-- {$i18n.t(`Failed to connect to {{URL}} OpenAPI tool server`, {

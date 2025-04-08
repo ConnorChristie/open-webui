@@ -206,18 +206,20 @@
 	</div>
 
 	<div class=" flex w-full space-x-2">
-		<div class="flex flex-1">
-			<div class=" self-center ml-1 mr-3">
-				<Search className="size-3.5" />
+		<div class=" flex flex-1 items-center w-full space-x-2">
+			<div class="flex flex-1 items-center relative">
+				<div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
+					<Search className="size-3.5" />
+				</div>
+				<input
+					class="input-setting !pl-9"
+					bind:value={query}
+					placeholder={$i18n.t('Search Functions')}
+				/>
 			</div>
-			<input
-				class=" w-full text-sm pr-4 py-1 rounded-r-xl outline-hidden bg-transparent"
-				bind:value={query}
-				placeholder={$i18n.t('Search Functions')}
-			/>
 		</div>
 
-		<div>
+		<div class="m-auto">
 			<a
 				class=" px-2 py-2 rounded-xl hover:bg-gray-700/10 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition font-medium text-sm flex items-center space-x-1"
 				href="/admin/functions/create"

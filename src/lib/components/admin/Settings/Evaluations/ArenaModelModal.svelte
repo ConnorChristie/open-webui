@@ -11,6 +11,7 @@
 	import { toast } from 'svelte-sonner';
 	import AccessControl from '$lib/components/workspace/common/AccessControl.svelte';
 	import ConfirmDialog from '$lib/components/common/ConfirmDialog.svelte';
+	import XMark from '$lib/components/icons/XMark.svelte';
 
 	export let show = false;
 	export let edit = false;
@@ -141,16 +142,7 @@
 					show = false;
 				}}
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					class="w-5 h-5"
-				>
-					<path
-						d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-					/>
-				</svg>
+				<XMark className="w-5 h-5" />
 			</button>
 		</div>
 
@@ -251,11 +243,11 @@
 						</div>
 						<div class="flex gap-2">
 							<div class="flex flex-col w-full">
-								<div class=" mb-0.5 text-xs text-gray-500">{$i18n.t('Name')}</div>
+								<div class=" mb-0.5 text-xs">{$i18n.t('Name')}</div>
 
 								<div class="flex-1">
 									<input
-										class="w-full text-sm bg-transparent placeholder:text-gray-300 dark:placeholder:text-gray-700 outline-hidden"
+										class="input-setting"
 										type="text"
 										bind:value={name}
 										placeholder={$i18n.t('Model Name')}
@@ -266,11 +258,11 @@
 							</div>
 
 							<div class="flex flex-col w-full">
-								<div class=" mb-0.5 text-xs text-gray-500">{$i18n.t('ID')}</div>
+								<div class=" mb-0.5 text-xs">{$i18n.t('ID')}</div>
 
 								<div class="flex-1">
 									<input
-										class="w-full text-sm bg-transparent placeholder:text-gray-300 dark:placeholder:text-gray-700 outline-hidden"
+										class="input-setting"
 										type="text"
 										bind:value={id}
 										placeholder={$i18n.t('Model ID')}
@@ -283,11 +275,11 @@
 						</div>
 
 						<div class="flex flex-col w-full mt-2">
-							<div class=" mb-1 text-xs text-gray-500">{$i18n.t('Description')}</div>
+							<div class=" mb-1 text-xs">{$i18n.t('Description')}</div>
 
 							<div class="flex-1">
 								<input
-									class="w-full text-sm bg-transparent placeholder:text-gray-300 dark:placeholder:text-gray-700 outline-hidden"
+									class="input-setting"
 									type="text"
 									bind:value={description}
 									placeholder={$i18n.t('Enter description')}
@@ -308,7 +300,7 @@
 
 						<div class="flex flex-col w-full">
 							<div class="mb-1 flex justify-between">
-								<div class="text-xs text-gray-500">{$i18n.t('Models')}</div>
+								<div class="text-xs">{$i18n.t('Models')}</div>
 
 								<div>
 									<button
@@ -354,13 +346,11 @@
 							{/if}
 						</div>
 
-						<hr class=" border-gray-100 dark:border-gray-700/10 my-2.5 w-full" />
-
 						<div class="flex items-center">
 							<select
-								class="w-full py-1 text-sm rounded-lg bg-transparent {selectedModelId
+								class="input-setting mr-2 {selectedModelId
 									? ''
-									: 'text-gray-500'} placeholder:text-gray-300 dark:placeholder:text-gray-700 outline-hidden"
+									: 'text-gray-500'}"
 								bind:value={selectedModelId}
 							>
 								<option value="">{$i18n.t('Select a model')}</option>
@@ -380,6 +370,8 @@
 								</button>
 							</div>
 						</div>
+
+						<hr class=" border-gray-100 dark:border-gray-700/10 my-2.5 w-full" />
 					</div>
 
 					<div class="flex justify-end pt-3 text-sm font-medium gap-1.5">

@@ -501,7 +501,7 @@
 
 						{#if enableDescription}
 							<Textarea
-								className=" text-sm w-full bg-transparent outline-hidden resize-none overflow-y-hidden "
+								className="input-setting resize-none overflow-y-hidden"
 								placeholder={$i18n.t('Add a short description about what this model does')}
 								bind:value={info.meta.description}
 							/>
@@ -538,7 +538,7 @@
 						</div>
 					</div>
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-1.5" />
+					<hr class=" border-gray-100 dark:border-gray-800 my-1.5" />
 
 					<div class="my-2">
 						<div class="flex w-full justify-between">
@@ -550,7 +550,7 @@
 								<div class=" text-xs font-semibold mb-2">{$i18n.t('System Prompt')}</div>
 								<div>
 									<Textarea
-										className=" text-sm w-full bg-transparent outline-hidden resize-none overflow-y-hidden "
+										className="input-setting resize-none overflow-y-hidden "
 										placeholder={`Write your model system prompt content here\ne.g.) You are Mario from Super Mario Bros, acting as an assistant.`}
 										rows={4}
 										bind:value={info.params.system}
@@ -592,7 +592,7 @@
 						</div>
 					</div>
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-1" />
+					<hr class=" border-gray-100 dark:border-gray-800 my-1" />
 
 					<div class="my-2">
 						<div class="flex w-full justify-between items-center">
@@ -656,7 +656,7 @@
 									{#each info.meta.suggestion_prompts as prompt, promptIdx}
 										<div class=" flex rounded-lg">
 											<input
-												class=" text-sm w-full bg-transparent outline-hidden border-r border-gray-100 dark:border-gray-850"
+												class="input-setting"
 												placeholder={$i18n.t('Write a prompt suggestion (e.g. Who are you?)')}
 												bind:value={prompt.content}
 											/>
@@ -689,7 +689,7 @@
 						{/if}
 					</div>
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-1.5" />
+					<hr class=" border-gray-100 dark:border-gray-800 my-1.5" />
 
 					<div class="my-2">
 						<Knowledge bind:selectedKnowledge={knowledge} collections={$knowledgeCollections} />

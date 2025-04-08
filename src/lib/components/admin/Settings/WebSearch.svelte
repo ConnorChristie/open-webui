@@ -87,10 +87,10 @@
 	<div class=" space-y-3 overflow-y-scroll scrollbar-hidden h-full">
 		{#if webConfig}
 			<div class="">
-				<div class="mb-3">
-					<div class=" mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+				<div class="my-2">
+					<div class="text-base font-medium">{$i18n.t('General')}</div>
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-2" />
+					<hr class="border-gray-100 dark:border-gray-850 my-2" />
 
 					<div class="  mb-2.5 flex w-full justify-between">
 						<div class=" self-center text-xs font-medium">
@@ -131,7 +131,7 @@
 									<div class="flex w-full">
 										<div class="flex-1">
 											<input
-												class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+												class="input-setting"
 												type="text"
 												placeholder={$i18n.t('Enter Searxng Query URL')}
 												bind:value={webConfig.search.searxng_query_url}
@@ -161,7 +161,7 @@
 									<div class="flex w-full">
 										<div class="flex-1">
 											<input
-												class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+												class="input-setting"
 												type="text"
 												placeholder={$i18n.t('Enter Google PSE Engine Id')}
 												bind:value={webConfig.search.google_pse_engine_id}
@@ -283,7 +283,7 @@
 									<div class="flex w-full">
 										<div class="flex-1">
 											<input
-												class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+												class="input-setting"
 												type="text"
 												placeholder={$i18n.t('Enter SearchApi Engine')}
 												bind:value={webConfig.search.searchapi_engine}
@@ -313,7 +313,7 @@
 									<div class="flex w-full">
 										<div class="flex-1">
 											<input
-												class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+												class="input-setting"
 												type="text"
 												placeholder={$i18n.t('Enter SerpApi Engine')}
 												bind:value={webConfig.search.serpapi_engine}
@@ -383,7 +383,7 @@
 									<div class="flex w-full">
 										<div class="flex-1">
 											<input
-												class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+												class="input-setting"
 												type="text"
 												placeholder={$i18n.t('Enter Bing Search V7 Endpoint')}
 												bind:value={webConfig.search.bing_search_v7_endpoint}
@@ -416,7 +416,7 @@
 									</div>
 
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+										class="input-setting"
 										placeholder={$i18n.t('Search Result Count')}
 										bind:value={webConfig.search.result_count}
 										required
@@ -429,7 +429,7 @@
 									</div>
 
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+										class="input-setting"
 										placeholder={$i18n.t('Concurrent Requests')}
 										bind:value={webConfig.search.concurrent_requests}
 										required
@@ -444,7 +444,7 @@
 							</div>
 
 							<input
-								class="w-full rounded-lg py-2 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+								class="input-setting"
 								placeholder={$i18n.t(
 									'Enter domains separated by commas (e.g., example.com,site.org)'
 								)}
@@ -491,7 +491,7 @@
 				</div>
 
 				<div class="mb-3">
-					<div class=" mb-2.5 text-base font-medium">{$i18n.t('Loader')}</div>
+					<div class="text-base font-medium">{$i18n.t('Loader')}</div>
 
 					<hr class=" border-gray-100 dark:border-gray-850 my-2" />
 
@@ -510,7 +510,7 @@
 						</div>
 						<div class="flex items-center relative">
 							<input
-								class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+								class="input-setting"
 								type="text"
 								placeholder={$i18n.t('Enter language codes')}
 								bind:value={youtubeLanguage}
@@ -525,7 +525,7 @@
 						</div>
 						<div class="flex items-center relative">
 							<input
-								class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+								class="input-setting"
 								type="text"
 								placeholder={$i18n.t('Enter proxy URL (e.g. https://user:password@host:port)')}
 								bind:value={youtubeProxyUrl}

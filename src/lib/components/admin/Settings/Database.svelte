@@ -32,8 +32,10 @@
 	}}
 >
 	<div class=" space-y-3 overflow-y-scroll scrollbar-hidden h-full">
-		<div>
-			<div class=" mb-2 text-sm font-medium">{$i18n.t('Database')}</div>
+		<div class="mt-2">
+			<div class="text-base font-medium">{$i18n.t('Database')}</div>
+
+			<hr class="border-gray-100 dark:border-gray-850 my-2" />
 
 			<input
 				id="config-json-input"
@@ -119,7 +121,7 @@
 				</div>
 			</button>
 
-			<hr class="border-gray-100 dark:border-gray-850 my-1" />
+			<hr class="border-gray-100 dark:border-gray-800 my-1" />
 
 			{#if $config?.features.enable_admin_export ?? true}
 				<div class="  flex w-full justify-between">

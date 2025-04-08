@@ -341,8 +341,8 @@
 >
 	<div class=" space-y-2.5 overflow-y-scroll scrollbar-hidden h-full pr-1.5">
 		<div class="">
-			<div class="mb-3">
-				<div class=" mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+			<div class="my-2">
+				<div class="text-base font-medium">{$i18n.t('General')}</div>
 
 				<hr class=" border-gray-100 dark:border-gray-850 my-2" />
 
@@ -458,7 +458,7 @@
 								</div>
 								<div class="self-center">
 									<input
-										class=" w-full rounded-lg py-1.5 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+										class=" input-setting"
 										type="number"
 										placeholder={$i18n.t('Enter Chunk Size')}
 										bind:value={chunkSize}
@@ -475,7 +475,7 @@
 
 								<div class="self-center">
 									<input
-										class="w-full rounded-lg py-1.5 px-4 text-sm bg-gray-50 dark:text-gray-300 dark:bg-gray-850 outline-hidden"
+										class="input-setting"
 										type="number"
 										placeholder={$i18n.t('Enter Chunk Overlap')}
 										bind:value={chunkOverlap}
@@ -525,7 +525,7 @@
 						{#if embeddingEngine === 'openai'}
 							<div class="my-0.5 flex gap-2 pr-2">
 								<input
-									class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+									class="input-setting flex-1"
 									placeholder={$i18n.t('API Base URL')}
 									bind:value={OpenAIUrl}
 									required
@@ -536,7 +536,7 @@
 						{:else if embeddingEngine === 'ollama'}
 							<div class="my-0.5 flex gap-2 pr-2">
 								<input
-									class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+									class="input-setting flex-1"
 									placeholder={$i18n.t('API Base URL')}
 									bind:value={OllamaUrl}
 									required
@@ -559,7 +559,7 @@
 								<div class="flex w-full">
 									<div class="flex-1 mr-2">
 										<input
-											class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+											class="input-setting"
 											bind:value={embeddingModel}
 											placeholder={$i18n.t('Set embedding model')}
 											required
@@ -570,7 +570,7 @@
 								<div class="flex w-full">
 									<div class="flex-1 mr-2">
 										<input
-											class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+											class="input-setting"
 											placeholder={$i18n.t('Set embedding model (e.g. {{model}})', {
 												model: embeddingModel.slice(-40)
 											})}
@@ -705,7 +705,7 @@
 									<div class="flex w-full">
 										<div class="flex-1 mr-2">
 											<input
-												class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+												class="input-setting flex-1"
 												placeholder={$i18n.t('Set reranking model (e.g. {{model}})', {
 													model: 'BAAI/bge-reranker-v2-m3'
 												})}
@@ -774,7 +774,7 @@
 							<div class=" self-center text-xs font-medium">{$i18n.t('Top K')}</div>
 							<div class="flex items-center relative">
 								<input
-									class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+									class="input-setting"
 									type="number"
 									placeholder={$i18n.t('Enter Top K')}
 									bind:value={querySettings.k}
@@ -789,7 +789,7 @@
 								<div class="self-center text-xs font-medium">{$i18n.t('Top K Reranker')}</div>
 								<div class="flex items-center relative">
 									<input
-										class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+										class="input-setting"
 										type="number"
 										placeholder={$i18n.t('Enter Top K Reranker')}
 										bind:value={querySettings.k_reranker}
@@ -806,7 +806,7 @@
 									<div class=" self-center text-xs font-medium">{$i18n.t('Minimum Score')}</div>
 									<div class="flex items-center relative">
 										<input
-											class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+											class="input-setting"
 											type="number"
 											step="0.01"
 											placeholder={$i18n.t('Enter Score')}
@@ -863,7 +863,7 @@
 							placement="top-start"
 						>
 							<input
-								class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+								class="input-setting"
 								type="number"
 								placeholder={$i18n.t('Leave empty for unlimited')}
 								bind:value={fileMaxSize}
@@ -884,7 +884,7 @@
 							placement="top-start"
 						>
 							<input
-								class="flex-1 w-full rounded-lg text-sm bg-transparent outline-hidden"
+								class="input-setting"
 								type="number"
 								placeholder={$i18n.t('Leave empty for unlimited')}
 								bind:value={fileMaxCount}

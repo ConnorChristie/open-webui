@@ -4,8 +4,7 @@
 ARG USE_CUDA=false
 ARG USE_OLLAMA=false
 ARG USE_CUDA_VER=cu128
-# any sentence transformer model; models to use can be found at https://huggingface.co/models?library=sentence-transformers
-you aren't able to use RAG Chat with your previous documents loaded in the WebUI! You need to re-embed them.
+
 ARG USE_EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 ARG USE_RERANKING_MODEL=""
 
